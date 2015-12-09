@@ -1,8 +1,8 @@
 'use strict';
 
-var app  = required( '../..');
-var User  = required( './user.model');
-var request  = required( 'supertest');
+var app  = require( '../..');
+var User  = require( './user.model');
+var request  = require( 'supertest');
 
 describe('User API:', function() {
   var user;

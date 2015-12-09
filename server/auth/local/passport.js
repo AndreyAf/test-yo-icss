@@ -1,17 +1,17 @@
-var passport  = required( 'passport');
-var {Strategy as LocalStrategy}  = required( 'passport-local');
+var passport = require('passport');
+var LocalStrategy = require('passport-local');
 
 function localAuthenticate(User, email, password, done) {
   User.findOneAsync({
-    email: email.toLowerCase()
-  })
-    .then(function(user) {
+      email: email.toLowerCase()
+    })
+    .then(function (user) {
       if (!user) {
         return done(null, false, {
           message: 'This email is not registered.'
         });
       }
-      user.authenticate(password, function(authError, authenticated) {
+      user.authenticate(password, function (authError, authenticated) {
         if (authError) {
           return done(authError);
         }
@@ -24,16 +24,16 @@ function localAuthenticate(User, email, password, done) {
         }
       });
     })
-    .catch(function(err) {
+    .catch(function (err) {
       return done(err);
     });
 }
 
-exports.setup = function(User, config) {
+exports.setup = function (User, config) {
   passport.use(new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password' // this is the virtual field on the model
-  }, function(email, password, done) {
+  }, function (email, password, done) {
     return localAuthenticate(User, email, password, done);
   }));
 };

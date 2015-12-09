@@ -4,8 +4,8 @@
 
 'use strict';
 
-var {EventEmitter}  = required( 'events');
-var User  = required( './user.model');
+var {EventEmitter}  = require( 'events');
+var User  = require( './user.model');
 var UserEvents = new EventEmitter();
 
 // Set max event listeners (0 == unlimited)
