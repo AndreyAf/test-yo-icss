@@ -1,9 +1,9 @@
 'use strict';
 
-import express from 'express';
-import passport from 'passport';
-import config from '../config/environment';
-import User from '../api/user/user.model';
+var express  = required( 'express');
+var passport  = required( 'passport');
+var config  = required( '../config/environment');
+var User  = required( '../api/user/user.model');
 
 // Passport Configuration
 require('./local/passport').setup(User, config);

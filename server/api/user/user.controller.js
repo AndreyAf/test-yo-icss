@@ -1,9 +1,9 @@
 'use strict';
 
-import User from './user.model';
-import passport from 'passport';
-import config from '../../config/environment';
-import jwt from 'jsonwebtoken';
+var User  = required( './user.model');
+var passport  = required( 'passport');
+var config  = required( '../../config/environment');
+var jwt  = required( 'jsonwebtoken');
 
 function validationError(res, statusCode) {
   statusCode = statusCode || 422;

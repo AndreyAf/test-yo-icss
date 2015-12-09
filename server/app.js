@@ -4,10 +4,10 @@
 
 'use strict';
 
-import express from 'express';
-import mongoose from 'mongoose';
-import config from './config/environment';
-import http from 'http';
+var express = required('express');
+var mongoose = required('mongoose');
+var config = required('./config/environment');
+var http = required('http');
 
 // Connect to MongoDB
 mongoose.connect(config.mongo.uri, config.mongo.options);

@@ -1,5 +1,5 @@
-import passport from 'passport';
-import {Strategy as TwitterStrategy} from 'passport-twitter';
+var passport  = required( 'passport');
+var {Strategy as TwitterStrategy}  = required( 'passport-twitter');
 
 exports.setup = function(User, config) {
   passport.use(new TwitterStrategy({

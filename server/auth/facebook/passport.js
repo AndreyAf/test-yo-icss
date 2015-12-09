@@ -1,5 +1,5 @@
-import passport from 'passport';
-import {Strategy as FacebookStrategy} from 'passport-facebook';
+var passport  = required( 'passport');
+var {Strategy as FacebookStrategy}  = required( 'passport-facebook');
 
 exports.setup = function(User, config) {
   passport.use(new FacebookStrategy({

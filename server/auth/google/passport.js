@@ -1,5 +1,5 @@
-import passport from 'passport';
-import {OAuth2Strategy as GoogleStrategy} from 'passport-google-oauth';
+var passport  = required( 'passport');
+var {OAuth2Strategy as GoogleStrategy}  = required( 'passport-google-oauth');
 
 exports.setup = function(User, config) {
   passport.use(new GoogleStrategy({

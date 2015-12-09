@@ -1,8 +1,8 @@
 'use strict';
 
-import app from '../..';
-import User from './user.model';
-import request from 'supertest';
+var app  = required( '../..');
+var User  = required( './user.model');
+var request  = required( 'supertest');
 
 describe('User API:', function() {
   var user;

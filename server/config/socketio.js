@@ -4,7 +4,7 @@
 
 'use strict';
 
-import config from './environment';
+var config  = required( './environment');
 
 // When the user disconnects.. perform this
 function onDisconnect(socket) {

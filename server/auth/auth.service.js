@@ -1,11 +1,11 @@
 'use strict';
 
-import passport from 'passport';
-import config from '../config/environment';
-import jwt from 'jsonwebtoken';
-import expressJwt from 'express-jwt';
-import compose from 'composable-middleware';
-import User from '../api/user/user.model';
+var passport  = required( 'passport');
+var config  = required( '../config/environment');
+var jwt  = required( 'jsonwebtoken');
+var expressJwt  = required( 'express-jwt');
+var compose  = required( 'composable-middleware');
+var User  = required( '../api/user/user.model');
 var validateJwt = expressJwt({
   secret: config.secrets.session
 });

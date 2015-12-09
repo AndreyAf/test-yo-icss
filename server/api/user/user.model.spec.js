@@ -1,7 +1,7 @@
 'use strict';
 
-import app from '../..';
-import User from './user.model';
+var app  = required( '../..');
+var User  = required( './user.model');
 var user;
 var genUser = function() {
   user = new User({

@@ -1,8 +1,8 @@
 'use strict';
 
-import express from 'express';
-import controller from './user.controller';
-import auth from '../../auth/auth.service';
+var express  = required( 'express');
+var controller  = required( './user.controller');
+var auth  = required( '../../auth/auth.service');
 
 var router = express.Router();
 
